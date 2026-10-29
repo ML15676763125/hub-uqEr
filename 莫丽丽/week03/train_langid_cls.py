@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-train_langid_cls.py —— 多语种「语种识别」分类器（默认 12 语种，兼容 8 语种）
+train_langid_cls.py —— 多语种「语种识别」分类器
 
-任务：一句话 → 它是什么语言（默认 12 分类）
+任务：一句话 → 它是什么语言（ 12 分类）
 模型结构可配置：Embedding → RNN/LSTM/BiLSTM → 掩码 MaxPool → 可选 LayerNorm/Dropout → Linear
 损失：CrossEntropyLoss      优化器：Adam
 默认数据：data/langid/v12（12 语种）
@@ -13,8 +13,7 @@ train_langid_cls.py —— 多语种「语种识别」分类器（默认 12 语�
 
 模型变体：--model-type rnn|lstm|bilstm；--no-layernorm / --no-dropout 可单独消融模块。
 支持标签：ar/en/es/hi/ja/ko/pt/ru/th/tr/vi/zh。类别顺序由标签表统一管理，
-模型输出层维度按所选数据集中的实际标签数量自动确定。选择 v8 数据时仍训练 8 类模型。
-字符表优先读取对应的 vocab_v8.txt / vocab_v12.txt；文件不存在时，会用训练集自动生成。
+
 """
 
 import os
