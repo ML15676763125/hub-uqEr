@@ -14,7 +14,6 @@
 运行：
     python compare_models.py
     python compare_models.py --epochs 8
-    python compare_models.py --data-dir data/langid/v8 --epochs 8 --output-dir comparisons/v8
 
 输出：
     comparisons/v12/summary.csv          总对比表
